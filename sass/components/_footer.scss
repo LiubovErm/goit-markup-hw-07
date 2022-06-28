@@ -10,6 +10,11 @@
     padding-left: 15px;
     padding-right: 15px;
     }
+.logo--footer {
+    color: $main-white-color;
+    padding-top: 0;
+    padding-bottom: 0;
+}
 .logo__text--blue {
     text-decoration: none;
     font-family: "Raleway", sans-serif;
@@ -17,7 +22,7 @@
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
-    color: $main-white-color;
+    color: $accent-color;
     } 
 address {
     font-style: normal;
@@ -33,9 +38,16 @@ address {
     text-decoration: none;
     line-height: 1.714;
     letter-spacing: 0.03em;
-    color: $main-white-color;
+    color: $color-text-footer;
     @include transition(color);
+    &:hover,
+    &:focus {
+        color:$accent-color;
     }
+    }
+.address__link--white {
+    color: $main-white-color;
+}
 .call-to-action {
     padding-top: 12px;
     margin-left: 70px;
@@ -46,7 +58,7 @@ address {
     line-height: 1.14;
     letter-spacing: 0.03em;
     margin-bottom: 20px;
-    color: $mainwhite-color;
+    color: $main-white-color;
     } 
 .call-to-action__list {
     display: flex;
@@ -58,7 +70,7 @@ address {
     width: 44px;
     height: 44px;
     }
-.footer-social-link {
+.call-to-action__link {
     @include centeredFlex(flex);
     width: 100%;
     height: 100%;
