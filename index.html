@@ -7,37 +7,37 @@
     <title lang="en">Web Studio</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/main.min.css">
     
     
 
 </head>
 
-<body class="page">
+<body>
     
     <header class="header">
         <div class="container">
-        <div class="nav-container">
-            <a href="./index.html" class="logo" lang="en"><span class="bluelogo">Web</span>Studio</a>
+        <div class="header-container">
+            <a href="./index.html" class="logo" lang="en"><span class="logo__text">Web</span>Studio</a>
         <nav class="navigation">
-            <ul class="navigation-items list">
-                <li class="nav-item"><a href="#hero" class="navigation-link current contactinfo">Студия</a></li>
-                <li class="nav-item"><a href="./portfolio.html" class="navigation-link contactinfo">Портфолио</a></li>
-                <li class="nav-item"><a href="#contacts" class="navigation-link contactinfo">Контакты</a></li>
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#hero" class="navigation__link navigation__link--current">Студия</a></li>
+                <li class="navigation__item"><a href="./portfolio.html" class="navigation__link">Портфолио</a></li>
+                <li class="navigation__item"><a href="#contacts" class="navigation__link">Контакты</a></li>
             </ul>
         </nav>
-            <ul class="contact list">
-                <li class="contact-item">
-                    <a href="mailto:info@devstudio.com" class="contactmail contactinfo">
-                        <svg class="email-icon" width="16px" height="12px">
+            <ul class="header-contacts">
+                <li class="header-contacts__item">
+                    <a href="mailto:info@devstudio.com" class="header-contacts__link">
+                        <svg class="header-icon" width="16px" height="12px">
                             <use href="./images/icons.svg#icon-envelope"></use>
                         </svg>
                         info@devstudio.com
                     </a>
                 </li>
-                <li class="contact-item">
-                    <a href="tel:+380961111111" class="contactphone contactinfo">
-                        <svg class="tel-icon" width="10px" height="16px">
+                <li class="header-contacts__item">
+                    <a href="tel:+380961111111" class="header-contacts__link">
+                        <svg class="header-icon" width="10px" height="16px">
                             <use href="./images/icons.svg#icon-telephone"></use>
                         </svg>
                         +38 096 111 11 11
@@ -48,61 +48,59 @@
         </div>
     </header>
 
-    
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="close-button" data-modal-close>
+                <svg class="icon-close" width="11px" height="11px">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+            <p class="modal__text">Оставьте свои данные, мы вам перезвоним</p>
+            <form class="form-modal">
+                <label for="user-name" class="form-modal__label">
+                    <span class="form-modal__title">Имя</span>
+                    <input type="text" class="form-modal__input" name="user-name" id="user-name">
+                    <svg class="form-icon" width="18px" height="18px">
+                        <use href="./images/icons.svg#icon-person"></use>
+                    </svg>
+                </label>
+                <label for="user-tel" class="form-modal__label">
+                    <span class="form-modal__title">Телефон</span>
+                    <input type="text" class="form-modal__input" name="user-tel" id="user-tel">
+                    <svg class="form-icon" width="18px" height="18px">
+                        <use href="./images/icons.svg#icon-phone-black"></use>
+                    </svg>
+                </label>
+                <label for="user-emal" class="form-modal__label">
+                    <span class="form-modal__title">Почта</span>
+                    <input type="text" class="form-modal__input" name="user-emal" id="user-emal">
+                    <svg class="form-icon" width="18px" height="18px">
+                        <use href="./images/icons.svg#icon-email-black"></use>
+                    </svg>
+                </label>
+                <label for="comment" class="form-modal__label">
+                    <span class="form-modal__title">Комментарий</span>
+                    <textarea class="form-modal__textarea" type="text" name="comment" id="comment" rows="6" placeholder="Введите текст"></textarea>
+                </label>
+                <div class="conditions">
+                    <label for="agree" class="conditions__label">
+                        <input type="checkbox" class="conditions__checkbox" name="agree-mailing" id="agree">
+                        <svg class="agree-icon" width="11px" height="8px">
+                        <use href="./images/icons.svg#icon-agree"></use>
+                        </svg>
+                        <span class="conditions__text">Соглашаюсь с рассылкой и принимаю <a href="./index.html" class="conditions__link">Условия договора</a></span>
+                    </label>
+                    <button type="submit" class="modal__button">Отправить</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
     <main>
     
-        <section class="hero" id="hero">
-            <div class="backdroup is-hidden" data-modal>
-                <div class="modal">
-                    <button type="button" class="close-button" data-modal-close>
-                        <svg class="icon-close" width="11px" height="11px">
-                            <use href="./images/icons.svg#icon-close"></use>
-                        </svg>
-                    </button>
-                    <p class="modal-text">Оставьте свои данные, мы вам перезвоним</p>
-                    <form>
-                        <label for="user-name" class="form-field">
-                            <span class="input-text">Имя</span>
-                            <input type="text" class="input-modal" name="user-name" id="user-name">
-                            <svg class="form-icon" width="18px" height="18px">
-                                <use href="./images/icons.svg#icon-person"></use>
-                            </svg>
-                        </label>
-                        <label for="user-tel" class="form-field">
-                            <span class="input-text">Телефон</span>
-                            <input type="text" class="input-modal" name="user-tel" id="user-tel">
-                            <svg class="form-icon" width="18px" height="18px">
-                                <use href="./images/icons.svg#icon-phone-black"></use>
-                            </svg>
-                        </label>
-                        <label for="user-emal" class="form-field">
-                            <span class="input-text">Почта</span>
-                            <input type="text" class="input-modal" name="user-emal" id="user-emal">
-                            <svg class="form-icon" width="18px" height="18px">
-                                <use href="./images/icons.svg#icon-email-black"></use>
-                            </svg>
-                        </label>
-                        <label for="comment" class="form-field comment-field">
-                            <span class="input-text">Комментарий</span>
-                            <textarea class="textarea-comment" type="text" name="comment" id="comment" rows="6" placeholder="Введите текст"></textarea>
-                        </label>
-                        <div class="conditions">
-                            <label for="agree" class="agree-field">
-                                <input type="checkbox" class="checkbox visually-hidden" name="agree-mailing" id="agree">
-                                <svg class="agree-icon" width="11px" height="8px">
-                                <use href="./images/icons.svg#icon-agree"></use>
-                                </svg>
-                                <span class="agree-text">Соглашаюсь с рассылкой и принимаю <a href="./index.html" class="link-conditions">Условия договора</a></span>
-                            </label>
-                            <button type="submit" class="agree-button">Отправить</button>
-                        </div>
-                        
-                    </form>
-                </div>
-            </div>
-
-            <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-            <button type="button" class="reserv" data-modal-open>Заказать услугу</button>
+        <section class="hero-section">
+            <h1 class="hero-section__title">Эффективные решения для вашего бизнеса</h1>
+            <button type="button" class="hero-section__button" data-modal-open>Заказать услугу</button>
         </section>
     
         <section class="section benefits">
