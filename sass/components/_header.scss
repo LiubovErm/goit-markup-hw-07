@@ -39,10 +39,6 @@
     padding-bottom: 32px;
     color: $primary-text-color;
     @include transition(color);
-    &:hover,
-    &:focus {
-        color:$accent-color;
-    }
     }
 .navigation__link--current {
     color: var(--accent-color);

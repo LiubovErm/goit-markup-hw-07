@@ -1,4 +1,4 @@
-.socialcontacts__list, .team-section__list, .activities-section__list, .benefits-section__list, .header-contacts, .navigation__list {
+.clients-section__list, .socialcontacts__list, .team-section__list, .activities-section__list, .benefits-section__list, .header-contacts, .navigation__list {
   list-style: none;
 }
 
@@ -16,7 +16,7 @@
   overflow: hidden;
 }
 
-.team-section, .activities-section, .benefits-section {
+.clients-section, .team-section, .activities-section, .benefits-section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -387,9 +387,6 @@ ul {
   color: #212121;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.navigation__link:hover, .navigation__link:focus {
-  color: #2196F3;
 }
 
 .navigation__link--current {
@@ -971,5 +968,62 @@ ul {
 }
 
 .team-icon {
+  fill: currentColor;
+}
+
+.clients-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.clients-section__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.clients-section__item:not(:first-child) {
+  margin-left: 30px;
+}
+
+.clients-section__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 170px;
+  height: 92px;
+  border-radius: 4px;
+  color: #AFB1B8;
+  border: 1px solid #AFB1B8;
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.clients-section__link:hover, .clients-section__link:focus {
+  color: #2196F3;
+  border-color: #2196F3;
+}
+
+.icon-client {
   fill: currentColor;
 }/*# sourceMappingURL=main.css.map */
